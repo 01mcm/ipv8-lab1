@@ -85,6 +85,8 @@ async def main():
     await ipv8.start()
 
     overlay = ipv8.get_overlay(LabCommunity)
+    print("My public key:")
+    print(overlay.my_peer.public_key.key_to_bin().hex())
     print("IPv8 started.")
 
     EMAIL = "m.c.montalvo@student.tudelft.nl"
